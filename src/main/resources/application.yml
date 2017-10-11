@@ -1,0 +1,32 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate.ddl-auto: false
+    show-sql: false
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: mytauuvijcbclv
+    password: 9c2d3183af5a890ca4eda5140ff548823750a09b6b7f21323b1c7314eb4a1bb2
+    url: jdbc:postgresql://mytauuvijcbclv:9c2d3183af5a890ca4eda5140ff548823750a09b6b7f21323b1c7314eb4a1bb2@ec2-54-83-26-65.compute-1.amazonaws.com:5432/d715cu8e7f0mm0
+    maxActive: 10
+    maxIdle: 5
+    minIdle: 2
+    initialSize: 5
+    removeAbandoned: true
+    validateQuery: SELECT 1
+    remove-abandoned: true
+    test-while-idle: true
+    remove-abandoned-timeout: 900
+  session:
+      store-type: none
+
+# server
+server:
+  session:
+    timeout: 1800
+  port: 8080
+
+# flyway
+flyway:
+  baselineOnMigrate: true
+  validateOnMigrate: false
